@@ -42,8 +42,6 @@ int main()
         total.charge += cars[i].charge;
     }
 
-    // printf("%-4sCar\tHours\t Charge%4s\n", "|", "|");
-
     printf("\n+-------------------------------------+\n");
     printf("%-6s%-10s%-10s%-10s%3s\n", "|", "Car", "Hours", "Charges", "|");
 
