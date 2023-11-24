@@ -1,6 +1,22 @@
 #include <iostream>
 using namespace std;
 
+// O(to - from)
+int sum_from_to_v1(int from, int to)
+{
+    if (to < from)
+        swap(from, to);
+
+    int sum = 0;
+
+    for (int i = from; i <= to; i++)
+    {
+        sum += i;
+    }
+
+    return sum;
+}
+
 int sum(int n)
 {
     int isNega = n < 0 ? -1 : 1;
@@ -9,7 +25,8 @@ int sum(int n)
     return isNega * (n * (n + 1)) / 2;
 }
 
-int sum_from_to(int from, int to)
+// O(1);
+int sum_from_to_v2(int from, int to)
 {
     if (to < from)
         swap(from, to);
@@ -30,6 +47,9 @@ int sum_from_to(int from, int to)
 int main()
 {
     int from, to;
+    cout << "Enter the range: ";
     cin >> from >> to;
-    cout << sum_from_to(from, to);
+
+    cout << sum_from_to_v1(from, to) << endl;
+    cout << sum_from_to_v2(from, to) << endl;
 }
