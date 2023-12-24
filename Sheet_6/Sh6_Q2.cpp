@@ -40,15 +40,15 @@ int menu()
     cout << "2 - Substract Fractions\n";
     cout << "3 - Multiply Fractions\n";
 
-    int choose;
-    cin >> choose;
+    int choice;
+    cin >> choice;
 
-    if (choose < 1 || choose > 3)
+    if (choice < 1 || choice > 3)
     {
         cout << "Invalid Input.";
         exit(0);
     }
-    return choose;
+    return choice;
 }
 
 fraction addFractions(fraction f1, fraction f2)
@@ -98,7 +98,7 @@ fraction multiplyFractions(fraction f1, fraction f2)
 int main()
 {
 
-    int choose = menu();
+    int choice = menu();
 
     fraction a, b, result;
 
@@ -111,7 +111,7 @@ int main()
     b.input();
     cout << endl;
 
-    switch (choose)
+    switch (choice)
     {
     case 1:
         result = addFractions(a, b);
