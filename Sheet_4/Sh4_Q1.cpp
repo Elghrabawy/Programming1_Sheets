@@ -42,6 +42,6 @@ int main()
 {
     int digit;
     cin >> digit;
-    
+
     digit_name(digit);
 }
