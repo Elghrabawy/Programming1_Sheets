@@ -45,7 +45,7 @@ int sumFirstLastDigits_v3(int number)
     // first digit = vlaue of first index in strNumber - 48 .. to convert digit from char to int
     firstDigit = strNumber[0] - '0';
 
-    // last digit = value of last index in strNumber - 48 >> to convert digit from char to int
+    // last digit = value of last index in strNumber - 48 .. to convert digit from char to int
     lastDigit = strNumber[strNumber.length() - 1] - '0';
 
     return firstDigit + lastDigit;
